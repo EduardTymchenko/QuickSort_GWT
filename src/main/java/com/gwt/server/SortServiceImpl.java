@@ -22,7 +22,7 @@ public class SortServiceImpl extends RemoteServiceServlet implements SortService
         if (!FieldVerifier.isValidNumber(numbers, 1, 1000)) {
             throw new IllegalArgumentException("Name must be number from 1 to 1000 [1,1000]");
         }
-        return generateArrayInt(Integer.parseInt(numbers), 0, 1000);
+        return generateArrayInt(Integer.parseInt(numbers), 1, 1000);
     }
 
     private List<Integer> generateArrayInt(int length, int rangeMin, int rangeMax) {
